@@ -26,6 +26,10 @@ def lucas(n):
     else:
         return lucas(n-1) + lucas(n-2)
 
+#print some outputs
+print('fibbonacci nth of 5 =', fibonacci(5))
+print('lucas nth of 5 =', lucas(5))
+
 #initial pass and fail tests
 def failing(n):
     return n
