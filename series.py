@@ -30,10 +30,3 @@ def lucas(n):
 print('fibbonacci nth of 5 =', fibonacci(5))
 print('lucas nth of 5 =', lucas(5))
 
-#initial pass and fail tests
-def failing(n):
-    return n
-
-def passing(n):
-    return n
-
