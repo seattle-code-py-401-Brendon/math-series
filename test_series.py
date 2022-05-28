@@ -6,32 +6,40 @@ from series import (
 
 
 #Fibbonacci tests
-def test_fibbonacci_0():
-    fibbNum = 0
-    assert fibonacci(fibbNum) == 0
+def test_fibbonacci_of_two():
+    fibb_num = 2
+    actual = fibonacci(fibb_num)
+    expected = 1
+    assert actual == expected
 
-def test_fibonacci_pass():
-    fibbNum = 5
-    assert fibonacci(fibbNum) == 5
-
-def test_fibonacci_fail():
-    fibbNum = 5
-    assert fibonacci(fibbNum) != 4
-
+# @pytest.mark.skip("todo")
+def test_fibonacci_no_value():
+    actual = fibonacci()
+    expected = 'Please enter an index/number'
+    assert actual == expected
+    
 #Lucas tests
 
-def test_lucas_0():
-    lucaNum = 0
-    assert lucas(lucaNum) == 2
+# @pytest.mark.skip("todo")
+def test_lucas_of_two():
+    luca_num = 2
+    actual = lucas(luca_num)
+    expected = 3
+    assert actual == expected
+    
 
-def test_lucas_pass():
-    lucaNum = 1
-    assert lucas(lucaNum) == 1
+# @pytest.mark.skip("todo")
+def test_lucas_no_value():
+    actual = lucas()
+    expected = 'Please enter an index/number for lucas nums'
+    assert actual == expected
 
-def test_lucas_fail():
-    lucaNum = 3
-    assert lucas(lucaNum) != 3
+@pytest.mark.skip("todo")
+def test_sum_series_fibonacci():
+    fibb_num
+    
 
-def test_lucas_pass():
-    lucaNum = 4
-    assert lucas(lucaNum) == 7
+@pytest.mark.skip("todo")
+def test_sum_series_lucas():
+    pass
+    
