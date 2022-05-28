@@ -13,7 +13,19 @@
 -------
 ### Tests
 * To run tests, start virtual env then run pytest. 
-* The tests that I failed are actually passed based on receving the wrong expected output. example: _3 != 4 == passes the test_
+* *The tests that I failed are actually passed based on receving the wrong expected output. example: _3 != 4 == passes the test_* __<<---this is old and outdated__
+
+there are 7 tests in total
+>fibonacci 
+- (1)test_fibbonacci_of_two(n)
+- (2)test_fibonacci_no_value( )
+>lucas 
+- (1)test_lucas_of_two(n)
+- (2)test_lucas_no_value( )
+>sum series 
+- (1)test_sum_series_fibonacci(n,p1,p2)
+- (2)test_default_fibonacci_return(n)
+- (3)test_sum_series_lucas(n,p1,p2)
 -------
 
 ## Overview
