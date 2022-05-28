@@ -1,47 +1,62 @@
 import pytest
-import series
-
-
-
-#get a initial failing test
-def test_initial_fail():
-    one = True
-    two = False
-    assert series.failing(one) == True
-#get a initial passing test
-def test_initial_pass():
-    one = True
-    two = False
-    assert series.passing(two) != True
+from series import (
+    fibonacci,
+    lucas,
+    sum_series
+)
 
 
 #Fibbonacci tests
-def test_fibbonacci_0():
-    fibbNum = 0
-    assert series.fibonacci(fibbNum) == 0
+# @pytest.mark.skip("fibb test (1)")
+def test_fibbonacci_of_two():
+    fibb_num = 2
+    actual = fibonacci(fibb_num)
+    expected = 1
+    assert actual == expected
 
-def test_fibonacci_pass():
-    fibbNum = 5
-    assert series.fibonacci(fibbNum) == 5
-
-def test_fibonacci_fail():
-    fibbNum = 5
-    assert series.fibonacci(fibbNum) != 4
-
+# @pytest.mark.skip("fibb test (2)")
+def test_fibonacci_no_value():
+    actual = fibonacci()
+    expected = 'Please enter an index/number'
+    assert actual == expected
+    
 #Lucas tests
+# @pytest.mark.skip("Lucas test (1)")
+def test_lucas_of_two():
+    luca_num = 2
+    actual = lucas(luca_num)
+    expected = 3
+    assert actual == expected
+    
 
-def test_lucas_0():
-    lucaNum = 0
-    assert series.lucas(lucaNum) == 2
+# @pytest.mark.skip("Lucas test (2)")
+def test_lucas_no_value():
+    actual = lucas()
+    expected = 'Please enter an index/number for lucas nums'
+    assert actual == expected
 
-def test_lucas_pass():
-    lucaNum = 1
-    assert series.lucas(lucaNum) == 1
+# @pytest.mark.skip("sum series test (1)")
+def test_sum_series_fibonacci():
+    fibb_num = 2
+    parameter_one = 0
+    parameter_two = 1
+    actual = sum_series(fibb_num,parameter_one,parameter_two)
+    expected = 1
+    assert actual == expected
 
-def test_lucas_fail():
-    lucaNum = 3
-    assert series.lucas(lucaNum) != 3
+# @pytest.mark.skip("sum series test (2)")
+def test_default_fibonacci_return():
+    nth_num = 5
+    actual = sum_series(nth_num)
+    expected = 5
+    assert actual == expected
 
-def test_lucas_pass():
-    lucaNum = 4
-    assert series.lucas(lucaNum) == 7
+    
+# @pytest.mark.skip("sum series test (3)")
+def test_sum_series_lucas():
+    luca_num = 3
+    parameter_one = 2
+    parameter_two = 1
+    actual = sum_series(luca_num,parameter_one,parameter_two)
+    expected = 4
+    assert actual == expected
