@@ -24,7 +24,7 @@ def fibonacci(n=None):
 
 
 def lucas(n=None):
-    ''' fibbonacci sequence 2,1,3,4,7,11,18...
+    ''' lucas sequence 2,1,3,4,7,11,18...
     nth = location in the sequence, not the value but the values location. similar to fibbonacci but starts with 2 and 1 '''
     if n == None:
         return 'Please enter an index/number for lucas nums'
@@ -36,9 +36,12 @@ def lucas(n=None):
         return lucas(n-1) + lucas(n-2)
 
 
-def sum_series(n,p1,p2):
+def sum_series(n,p1=0,p2=1):
     ''' n = nth location, p1 = optional parameter 1, p2 = optional parameter 2  '''
-    
+    if p1 == 2 and p2 == 1:
+        return lucas(n)
+    else:
+        return fibonacci(n)
     
 
 #print some outputs
